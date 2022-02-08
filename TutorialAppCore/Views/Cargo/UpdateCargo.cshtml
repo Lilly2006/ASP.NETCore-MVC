@@ -1,0 +1,40 @@
+﻿@model TutorialAppCore.Models.CargoSystem
+<div>
+    <a asp-controller="Cargo" asp-action="Index">View CargoDetails</a>
+</div>
+<hr />
+<form method="post">
+    <table>
+        <tr>
+            <td>Customer Name</td>
+            <td><input type="text" asp-for="Customer_Name" value="" /></td>
+        </tr>
+        <tr>
+            <td>Customer Id</td>
+            <td><input type="text" asp-for="Customer_Id" value="" /></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" asp-for="Address" value="" /></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td><input type="text" asp-for="City" value="" /></td>
+        </tr>
+        <tr>
+            <td>PinCode </td>
+            <td><input type="text" asp-for="Pincode" value="" /></td>
+        </tr>
+        <tr>
+            <td>Phone_No </td>
+            <td><input type="text" asp-for="Ph_No" value="" /></td>
+        </tr>
+       
+        <tr><td></td><td><input type="submit" value="Update" /></td></tr>
+
+    </table>
+    <hr />
+    <div>
+        <h4>@ViewBag.message</h4>
+    </div>
+</form>

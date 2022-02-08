@@ -1,0 +1,19 @@
+﻿@model TutorialAppCore.Models.CargoSystem
+
+    <div>
+        <a asp-controller="Cargo" asp-action="Index">View CargoDetails</a>
+    </div>
+    <hr />
+    <form method="post">
+        <table>
+            <tr>
+                <td>Cusomer_Id</td>
+                <td><input type="text" asp-for="Customer_Id" value="" /></td>
+            </tr>
+            <tr><td></td><td><input type="submit" value="Delete" /></td></tr>
+        </table>
+        <hr/>
+        <div>
+            <h4>@ViewBag.message</h4>
+        </div>
+        </form>

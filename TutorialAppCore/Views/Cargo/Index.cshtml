@@ -1,0 +1,44 @@
+﻿@model IEnumerable<TutorialAppCore.Models.CargoSystem>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*@{Layout = null;}*@
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<h3 style="background-color:brown; color:white; padding:10px" >Cargo System Table</h3>
+<hr />
+<div>
+    <a asp-controller="Cargo" style="margin-left:10px; padding-right:20px" asp-action="InsertCargo">Cargo entry</a>
+    <a asp-controller="Cargo" style="margin-left: 10px; padding-left: 20px" asp-action="UpdateCargo">Update Entry</a>
+    <a asp-controller="Cargo" style="margin-left: 10px; padding-left: 20px" asp-action="DeleteCargo">Delete Entry</a>
+</div>
+<hr />
+<div style="margin-left:50px; margin-right:50px;border-block-color:red">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Customer Id</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Pincode</th>
+                <th>Ph_No</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Customer_Name</td>
+                    <td>@item.Customer_Id</td>
+                    <td>@item.Address</td>
+                    <td>@item.City</td>
+                    <td>@item.Pincode</td>
+                    <td>@item.Ph_No</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
